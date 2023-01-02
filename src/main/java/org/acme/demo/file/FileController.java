@@ -9,15 +9,16 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 @RestController
 public class FileController {
-  private final FileService fileStorageService;
+
+  private final FileStorageService fileStorageService;
 
   @Autowired
-  public FileController(FileService fileStorageService) {
+  public FileController(FileStorageService fileStorageService) {
     this.fileStorageService = fileStorageService;
   }
 
-  @PostMapping("/uploadFile")
-  public UploadFileResponse uploadFile(@RequestParam("file") MultipartFile file) {
+  @PostMapping("/file")
+  public UploadFileResponseDto uploadFile(@RequestParam("file") MultipartFile file){
     String fileName = fileStorageService.storeFile(file);
 
     String fileDownloadUri = ServletUriComponentsBuilder.fromCurrentContextPath()
@@ -25,7 +26,7 @@ public class FileController {
         .path(fileName)
         .toUriString();
 
-    return new UploadFileResponse(fileName, fileDownloadUri,
+    return new UploadFileResponseDto(fileName, fileDownloadUri,
         file.getContentType(), file.getSize());
   }
 }
