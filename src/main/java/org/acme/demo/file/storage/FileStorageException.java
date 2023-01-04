@@ -1,4 +1,4 @@
-package org.acme.demo.file;
+package org.acme.demo.file.storage;
 
 public class FileStorageException extends RuntimeException{
 
