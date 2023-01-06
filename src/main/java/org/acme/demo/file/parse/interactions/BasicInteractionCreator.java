@@ -1,6 +1,6 @@
-package org.acme.demo.interactions;
+package org.acme.demo.file.parse.interactions;
 
-import utils.DataTransformUtils;
+import org.acme.demo.utils.DataTransformUtils;
 
 import lombok.Getter;
 import org.acme.demo.file.parse.messages.Message;

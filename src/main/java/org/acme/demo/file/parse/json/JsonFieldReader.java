@@ -2,6 +2,7 @@ package org.acme.demo.file.parse.json;
 
 import com.google.gson.stream.JsonReader;
 
+import java.nio.file.Path;
 import org.acme.demo.file.parse.json.field.JsonField;
 import org.acme.demo.file.parse.json.field.JsonFieldName;
 import org.acme.demo.file.parse.json.field.values.JsonFieldValue;
@@ -18,8 +19,9 @@ public class JsonFieldReader {
 
     private final JsonReader innerReader;
 
-    public JsonFieldReader(String jsonFilePath) throws FileNotFoundException {
-        innerReader = new JsonReader(new InputStreamReader(new FileInputStream(jsonFilePath), StandardCharsets.UTF_8));
+    public JsonFieldReader(Path filePath) throws FileNotFoundException {
+        innerReader = new JsonReader(
+            new InputStreamReader(new FileInputStream(filePath.toFile()), StandardCharsets.UTF_8));
     }
 
     public void readInitialFields() throws IOException {

@@ -1,5 +1,6 @@
 package org.acme.demo.file.parse.messages;
 
+import java.nio.file.Path;
 import org.acme.demo.file.parse.json.JsonFieldReader;
 import org.acme.demo.file.parse.json.field.JsonField;
 import org.acme.demo.file.parse.messages.setters.MessageSetter;
@@ -17,7 +18,7 @@ public class MessageReader {
 
     private final JsonFieldReader jsonFieldReader;
 
-    public MessageReader(String filePath) throws IOException {
+    public MessageReader(Path filePath) throws IOException {
         this.jsonFieldReader = new JsonFieldReader(filePath);
     }
 

@@ -1,6 +1,6 @@
-package org.acme.demo.main;
+package org.acme.demo.utils;
 
-import org.acme.demo.interactions.BasicInteraction;
+import org.acme.demo.file.parse.interactions.BasicInteraction;
 import org.acme.demo.file.parse.messages.Message;
 
 import java.util.List;

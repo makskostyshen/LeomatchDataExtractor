@@ -1,7 +1,7 @@
-package org.acme.demo.interactions;
+package org.acme.demo.file.parse.interactions;
 
-import org.acme.demo.interactions.components.MediaFiles;
-import org.acme.demo.interactions.components.BotTexts;
+import org.acme.demo.file.parse.interactions.components.BotTexts;
+import org.acme.demo.file.parse.interactions.components.MediaFiles;
 import lombok.Getter;
 import lombok.Setter;
 import org.acme.demo.file.parse.messages.Message;

@@ -1,6 +1,6 @@
-package org.acme.demo.interactions.update;
+package org.acme.demo.file.parse.interactions.update;
 
-import org.acme.demo.interactions.BasicInteractionsHolder;
+import org.acme.demo.file.parse.interactions.BasicInteractionsHolder;
 import org.acme.demo.file.parse.messages.Message;
 
 public interface BasicInteractionUpdate {

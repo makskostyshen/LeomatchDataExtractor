@@ -1,4 +1,4 @@
-package utils;
+package org.acme.demo.utils;
 
 public class FilePathUtils {
 

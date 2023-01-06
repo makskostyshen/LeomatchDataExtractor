@@ -1,4 +1,4 @@
-package utils;
+package org.acme.demo.utils;
 
 public class BotUtils {
     public static final String BOT_NAME = "Дайвинчик | Leomatchbot";

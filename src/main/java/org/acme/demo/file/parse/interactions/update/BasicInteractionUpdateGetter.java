@@ -1,6 +1,6 @@
-package org.acme.demo.interactions.update;
+package org.acme.demo.file.parse.interactions.update;
 
-import utils.BotUtils;
+import org.acme.demo.utils.BotUtils;
 import org.acme.demo.file.parse.messages.Message;
 
 public class BasicInteractionUpdateGetter {

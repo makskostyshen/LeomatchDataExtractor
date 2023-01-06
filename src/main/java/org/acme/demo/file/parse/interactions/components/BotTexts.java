@@ -1,4 +1,4 @@
-package org.acme.demo.interactions.components;
+package org.acme.demo.file.parse.interactions.components;
 
 import org.acme.demo.file.parse.messages.Message;
 

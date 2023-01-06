@@ -1,18 +1,23 @@
 package org.acme.demo.file.parse.messages;
 
-import utils.FilePathUtils;
+import java.nio.file.Path;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class MessagesGetter {
+    private Path filePath;
+
+    public MessagesGetter(Path filePath) {
+        this.filePath = filePath;
+    }
 
     public List<Message> getMessages() throws IOException {
 
         List<Message> messages = new ArrayList<>();
 
-        MessageReader messageReader = new MessageReader(FilePathUtils.getJsonFilePath());
+        MessageReader messageReader = new MessageReader(filePath);
         messageReader.open();
 
         while (messageReader.hasNextMessage()){

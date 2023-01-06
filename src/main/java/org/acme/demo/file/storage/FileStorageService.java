@@ -5,7 +5,6 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
-import org.acme.demo.file.storage.FileStorageException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Service;
@@ -15,13 +14,15 @@ import org.springframework.web.multipart.MultipartFile;
 @Service
 public class FileStorageService {
   private final String folderPathString;
+  private final String jsonFileName;
 
   @Autowired
   public FileStorageService(Environment environment) {
     this.folderPathString = environment.getProperty("file.upload-dir");
+    this.jsonFileName = environment.getProperty("file.json-name");
   }
 
-  private Path obtainFilePath(String userName){
+  private Path obtainFolderPath(String userName){
     String filePathString = folderPathString + "\\" + userName;
     Path filePath = Paths
         .get(filePathString)
@@ -37,17 +38,20 @@ public class FileStorageService {
     return filePath;
   }
 
-  public String storeFile(MultipartFile file, String userName) {
+  public Path storeFile(MultipartFile file, String userName) {
     String fileName = StringUtils.cleanPath(file.getOriginalFilename());
-    Path filePath = obtainFilePath(userName);
+    Path folderPath = obtainFolderPath(userName);
 
     try {
-      Path targetLocation = filePath.resolve(fileName);
+      Path targetLocation = folderPath.resolve(fileName);
       Files.copy(file.getInputStream(), targetLocation, StandardCopyOption.REPLACE_EXISTING);
 
     } catch (IOException ex) {
       throw new FileStorageException("Could not store file");
     }
-    return fileName;
+    return Paths
+        .get(folderPath.toString() + "\\" + jsonFileName)
+        .toAbsolutePath()
+        .normalize();
   }
 }

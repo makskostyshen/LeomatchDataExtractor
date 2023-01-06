@@ -1,4 +1,4 @@
-package org.acme.demo.interactions;
+package org.acme.demo.file.parse.interactions;
 
 public class SameUserBotDateTimeException extends RuntimeException{
 
