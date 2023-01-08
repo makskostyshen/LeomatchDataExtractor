@@ -1,7 +1,7 @@
 package org.acme.demo.utils;
 
-import org.acme.demo.file.parse.interactions.BasicInteraction;
-import org.acme.demo.file.parse.messages.Message;
+import org.acme.demo.old.interactions.BasicInteraction;
+import org.acme.demo.old.messages.Message;
 
 import java.util.List;
 
