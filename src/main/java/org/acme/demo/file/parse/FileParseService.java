@@ -2,10 +2,10 @@ package org.acme.demo.file.parse;
 
 import java.nio.file.Path;
 import java.util.List;
-import org.acme.demo.file.parse.messages.Message;
-import org.acme.demo.file.parse.messages.MessagesGetter;
-import org.acme.demo.file.parse.interactions.BasicInteraction;
-import org.acme.demo.file.parse.interactions.BasicInteractionsGetter;
+import org.acme.demo.old.messages.Message;
+import org.acme.demo.old.messages.MessagesGetter;
+import org.acme.demo.old.interactions.BasicInteraction;
+import org.acme.demo.old.interactions.BasicInteractionsGetter;
 import org.acme.demo.statistics.StatisticsData;
 import org.acme.demo.utils.ConsolePrinter;
 import org.springframework.stereotype.Service;
