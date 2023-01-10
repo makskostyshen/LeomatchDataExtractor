@@ -1,7 +1,7 @@
 package org.acme.demo.old.json.field.values;
 
 
-import org.acme.demo.utils.DataTransformUtils;
+import org.acme.demo.old.utils.DataTransformUtils;
 
 public class StringJsonFieldValue implements JsonFieldValue {
 

@@ -7,7 +7,7 @@ import org.acme.demo.old.messages.MessagesGetter;
 import org.acme.demo.old.interactions.BasicInteraction;
 import org.acme.demo.old.interactions.BasicInteractionsGetter;
 import org.acme.demo.statistics.StatisticsData;
-import org.acme.demo.utils.ConsolePrinter;
+import org.acme.demo.old.utils.ConsolePrinter;
 import org.springframework.stereotype.Service;
 
 @Service

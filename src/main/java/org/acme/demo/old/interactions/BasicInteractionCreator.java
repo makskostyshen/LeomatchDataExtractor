@@ -1,6 +1,6 @@
 package org.acme.demo.old.interactions;
 
-import org.acme.demo.utils.DataTransformUtils;
+import org.acme.demo.old.utils.DataTransformUtils;
 
 import lombok.Getter;
 import org.acme.demo.old.messages.Message;

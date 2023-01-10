@@ -1,4 +1,4 @@
-package org.acme.demo.utils;
+package org.acme.demo.old.utils;
 
 import org.acme.demo.old.interactions.BasicInteraction;
 import org.acme.demo.old.messages.Message;

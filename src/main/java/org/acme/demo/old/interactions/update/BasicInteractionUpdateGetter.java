@@ -1,6 +1,6 @@
 package org.acme.demo.old.interactions.update;
 
-import org.acme.demo.utils.BotUtils;
+import org.acme.demo.old.utils.BotUtils;
 import org.acme.demo.old.messages.Message;
 
 public class BasicInteractionUpdateGetter {
